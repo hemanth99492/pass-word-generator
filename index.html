@@ -10,9 +10,32 @@
     <div class="container">
         <h1>Password Generator</h1>
         <label for="length">Password Length:</label>
-        <input type="number" id="length" min="8" value="12">
+        <input type="number" id="length" min="4" value="12">
+        
+        <div>
+            <input type="checkbox" id="uppercase" checked>
+            <label for="uppercase">Include Uppercase Letters</label>
+        </div>
+        <div>
+            <input type="checkbox" id="lowercase" checked>
+            <label for="lowercase">Include Lowercase Letters</label>
+        </div>
+        <div>
+            <input type="checkbox" id="numbers" checked>
+            <label for="numbers">Include Numbers</label>
+        </div>
+        <div>
+            <input type="checkbox" id="special" checked>
+            <label for="special">Include Special Characters</label>
+        </div>
+
         <button onclick="generatePassword()">Generate Password</button>
+        <button onclick="copyToClipboard()">Copy to Clipboard</button>
+        
         <p id="result"></p>
+        <p id="strength"></p>
+        <h2>Password History</h2>
+        <ul id="history"></ul>
     </div>
     <script src="script.js"></script>
 </body>
